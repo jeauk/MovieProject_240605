@@ -1,0 +1,314 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+
+/* ===============대가리부분======================= */
+header {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to right,#00131A, #183961); 
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.title_name {
+  float: left;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  width: 25%;
+  justify-content: flex-start;
+}
+
+.title_t {
+  margin: auto;
+}
+
+/* ===============메뉴부분======================= */
+.title {
+  width: 100%;
+  height: 100%;
+}
+.title_menu {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  float: left;
+  display: flex;
+  align-items: flex-end;
+}
+
+nav {
+  float: left;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+nav ul li a {
+  margin-left: 40px;
+  float: left;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 45px;
+}
+.menu_b {
+  width: 100%;
+  height: 100%;
+}
+.menu_b li {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+li > ul > li {
+  line-height: 50px;
+  background-color: #94a9ff;
+}
+li > ul {
+  height: 0; 
+  overflow: hidden;
+}
+.menu_a > li:hover {
+  background-color: #94a9ff;
+  transition-duration: 0.5s;
+}
+.menu_a > li:hover .ul {
+  height: 250px; 
+  transition-duration: 1s;
+}
+
+/* ===============몸통부분======================= */
+
+
+.main_contents {
+  height: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  background-color: #30393D ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contents {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.movie {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+@import url('https://fonts.googleapis.com/css?family=Sarala:700|Exo+2:300');
+
+.wrapper {
+    width: 210px; /* 기존 280px에서 75%로 줄임 */
+    height: 360px; /* 기존 480px에서 75%로 줄임 */
+
+    position: relative;
+}
+
+.card {
+    width: 240px; /* 기존 320px에서 75%로 줄임 */
+    height: 337.5px; /* 기존 450px에서 75%로 줄임 */
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-105px); /* 기존 -140px에서 75%로 줄임 */
+    transition: transform 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    cursor: pointer;
+}
+
+.card>div {
+    position: absolute;
+    width: 240px; /* 기존 320px에서 75%로 줄임 */
+    height: 337.5px; /* 기존 450px에서 75%로 줄임 */
+    padding: 25.5px 15.75px; /* 기존 34px 21px에서 75%로 줄임 */
+    transition: all 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+.front1{
+  background-image: url('/images/001.jpg');
+  background-size: cover;
+  transform: rotateY(0deg) translateZ(160px);
+}
+
+.front2{
+  background-image: url('/images/002.jpg');
+  background-size: cover;
+  transform: rotateY(0deg) translateZ(160px);
+}
+
+.front3{
+
+  background-image: url('/images/003.jpg');
+  background-size: cover;
+  transform: rotateY(0deg) translateZ(160px);
+}
+
+.front4{
+
+  background-image: url('/images/004.jpg');
+  background-size: cover;
+  transform: rotateY(0deg) translateZ(160px);
+
+}
+.right {
+    background-color:#ffffff;
+    transform: rotateY(90deg) translateZ(120px); /* 기존 160px에서 75%로 줄임 */
+}
+
+.card:hover {
+    transform: translateZ(-120px) rotateY(-90deg); /* 기존 -160px에서 75%로 줄임 */
+}
+
+.card:hover .front {
+    opacity: 0;
+}
+
+.card:hover .right {
+    opacity: 1;
+}
+
+.card_h2 {
+  margin-bottom: 10px;
+    color: #000000;
+    margin-left: 10px;
+    font-size: 25px; /* 기존 25px에서 75%로 줄임 */
+    font-family: 'Sarala';
+    font-weight: 700;
+}
+
+@keyframes float {
+    0% {
+        transform: translateZ(15px); /* 기존 20px에서 75%로 줄임 */
+    }
+
+    100% {
+        transform: translateY(-15.75px) translateX(-9.75px) translateZ(22.5px); /* 기존 21px, 13px, 30px에서 75%로 줄임 */
+    }
+}
+
+.card:hover~.img-wrapper img {
+    transform: scale(0.9) translateX(57.75%) translateY(67.5%) rotateZ(80deg); /* 기존 77%, 90%에서 75%로 줄임 */
+}
+
+.card_ul {
+    margin-left: 15.75px; /* 기존 21px에서 75%로 줄임 */
+    padding: 0;
+    font-size: 13px; /* 기존 16px에서 75%로 줄임 */
+    font-weight: 300;
+    list-style: none;
+}
+
+.card_li {
+    padding-bottom: 6px; /* 기존 8px에서 75%로 줄임 */
+    position: relative;
+}
+
+.card_button {
+    position: absolute;
+    right: 15.75px; /* 기존 21px에서 75%로 줄임 */
+    bottom: 25.5px; /* 기존 34px에서 75%로 줄임 */
+    border: solid 1px black;
+    box-shadow: none;
+    background: none;
+    color: inherit;
+    font-family: 'Exo 2';
+    font-weight: 300;
+    font-size: 11.25px; /* 기존 15px에서 75%로 줄임 */
+    letter-spacing: -.25px;
+    font-weight: 700;
+    padding: 9.75px 25.5px; /* 기존 13px 34px에서 75%로 줄임 */
+    background: white;
+    background-size: 125% 100%;
+    background-position: right;
+    cursor: pointer;
+    box-shadow: 6px 3.75px 9.75px rgba(34, 34, 34, .08); /* 기존 8px 5px 13px에서 75%로 줄임 */
+    transform: scale(0) skewY(13deg);
+    transition: all 150ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    transform-origin: right bottom;
+}
+
+.card:hover button {
+    transform: scale(1) skewY(0);
+    color: gray;
+}
+
+.card:not(:hover) button {
+    opacity: 0;
+}
+
+.card_button:hover {
+    background-position: left;
+}
+
+.price {
+    position: absolute;
+    bottom: 18.75px; /* 기존 25px에서 75%로 줄임 */
+    right: 1px;
+    font-size: 21px; /* 기존 28px에서 75%로 줄임 */
+    text-shadow: -1px 0px #ffffff, 0px 1px #ffffff, 1px 0px #ffffff, 0px -1px #ffffff;
+    color: black;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.33;
+        transform: scale(.89);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        transform: scale(.67);
+    }
+}
+
+
+/* ===============popular_movie 부분======================= */
+.popular_movie {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popular_movie video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: fill;
+}
+
+
+
+/* ===============바닥부분======================= */
+footer {
+  text-align: left;
+  padding: 10px 0;
+  background: #b9b9b988;
+  color: #00000055;
+}
+footer>p{
+  margin-left: 40px
+}
